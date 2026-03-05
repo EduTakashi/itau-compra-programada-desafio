@@ -1,14 +1,14 @@
 package entities;
 
 import enuns.TipoEnum;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_contas_graficas")
@@ -18,9 +18,19 @@ import java.util.Date;
 @Getter
 public class ContasGraficas {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long ClientId;
+
+    @OneToOne
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    private Client clientId;
+
+    @OneToMany(mappedBy = "contaGraficaId")
+    private List<Custodias> custodias;
+
     private String numeroConta;
     private TipoEnum tipo;
     private Date DataCriacao;
+
 }

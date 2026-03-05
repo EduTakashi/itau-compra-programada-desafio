@@ -7,31 +7,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
-@Table(name = "tb_clients")
-public class Client {
+@Table(name = "tb_cestas_recomendacao")
+public class CestasRecomendacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
+    private boolean Ativa;
+    private Date dataCriacao;
+    private Date dataDesativacao;
 
-    @Column(unique = true)
-    private String cpf;
-
-    private String email;
-    private Double valorMensal;
-
-    @Column(columnDefinition = "BOOLEAN DEFAULT true")
-    private boolean Ativo;
-    private Date DataAdesao;
-
-    @OneToOne(mappedBy = "clientId")
-    private ContasGraficas contasGraficas;
+    @OneToMany(mappedBy = "cestasId")
+    private List<ItensCesta> itens;
 }
