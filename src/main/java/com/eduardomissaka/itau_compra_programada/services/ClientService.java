@@ -46,7 +46,7 @@ public class ClientService {
         client.setDataAdesao(LocalDate.now());
         client = repository.save(client);
 
-        // RN-004: criar Conta Gráfica Filhote automaticamente
+        // RN-004: criar Conta Gráfica Filhote automaticamente vinculada ao cliente
         ContasGraficas contaGrafica = new ContasGraficas();
         contaGrafica.setClientId(client);
         contaGrafica.setTipo(ContasGraficasEnum.FILHOTE);
