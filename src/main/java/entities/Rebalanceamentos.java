@@ -1,5 +1,6 @@
 package entities;
 
+import enuns.RebalanceamentosEnum;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
@@ -8,6 +9,8 @@ import java.util.Date;
 public class Rebalanceamentos {
 
     private Long id;
+
+    private RebalanceamentosEnum tipo;
 
     @ManyToOne
     @JoinColumn(name = "client_idRebalanceamentos", referencedColumnName = "id")
