@@ -4,6 +4,7 @@ import com.eduardomissaka.itau_compra_programada.enuns.RebalanceamentosEnum;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Rebalanceamentos {
@@ -19,5 +20,5 @@ public class Rebalanceamentos {
     private String tickerVendido;
     private String tickerComprado;
     private Double valorVenda;
-    private Date dataRebalanceamento;
+    private LocalDate dataRebalanceamento;
 }

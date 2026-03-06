@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -28,7 +28,7 @@ public class Custodias {
     private String ticker;
     private int quantidade;
     private double precoMedio;
-    private Date dataUltimaAtualizacao;
+    private LocalDate dataUltimaAtualizacao;
 
     @OneToMany(mappedBy = "ordemCompraId")
     private List<Distrubuicoes> ordemCompra;

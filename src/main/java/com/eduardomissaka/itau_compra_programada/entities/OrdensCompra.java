@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -29,6 +30,6 @@ public class OrdensCompra {
     private int quantidade;
     private double precoUnitario;
     private OrdensCompraEnum tipoMercado;
-    private Date dataExecucao;
+    private LocalDate dataExecucao;
 
 }

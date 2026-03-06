@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -27,11 +27,13 @@ public class Client {
     private String cpf;
 
     private String email;
+
+    @Column(precision = 10, scale = 2)
     private Double valorMensal;
 
-    @Column(columnDefinition = "BOOLEAN DEFAULT true")
     private boolean Ativo;
-    private Date DataAdesao;
+
+    private LocalDate DataAdesao;
 
     @OneToOne(mappedBy = "clientId")
     private ContasGraficas contasGraficas;

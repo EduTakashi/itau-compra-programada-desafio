@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -31,6 +31,6 @@ public class ContasGraficas {
 
     private String numeroConta;
     private ContasGraficasEnum tipo;
-    private Date DataCriacao;
+    private LocalDate DataCriacao;
 
 }

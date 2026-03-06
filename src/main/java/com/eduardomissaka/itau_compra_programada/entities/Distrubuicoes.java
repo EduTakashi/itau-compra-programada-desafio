@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -31,5 +32,5 @@ public class Distrubuicoes {
     private String ticker;
     private int quantidade;
     private double precoUnitario;
-    private Date dataDistribuicao;
+    private LocalDate dataDistribuicao;
 }
