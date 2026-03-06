@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -34,4 +35,7 @@ public class Client {
 
     @OneToOne(mappedBy = "clientId")
     private ContasGraficas contasGraficas;
+
+    @OneToMany(mappedBy = "clientId")
+    private List<EventosIR> eventosList;
 }

@@ -1,6 +1,6 @@
 package enuns;
 
-public enum TipoEnum {
+public enum ContasGraficasEnum {
 
     MASTER, FILHOTE;
 }

@@ -1,6 +1,6 @@
 package entities;
 
-import enuns.TipoEnum;
+import enuns.ContasGraficasEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,7 +30,7 @@ public class ContasGraficas {
     private List<Custodias> custodias;
 
     private String numeroConta;
-    private TipoEnum tipo;
+    private ContasGraficasEnum tipo;
     private Date DataCriacao;
 
 }

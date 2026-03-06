@@ -1,6 +1,6 @@
 package enuns;
 
-public enum TipoMercado {
+public enum OrdensCompraEnum {
 
     LOTE, FRACIONARIO;
 }

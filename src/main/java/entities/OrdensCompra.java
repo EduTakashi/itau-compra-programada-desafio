@@ -1,6 +1,6 @@
 package entities;
 
-import enuns.TipoMercado;
+import enuns.OrdensCompraEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -29,7 +28,7 @@ public class OrdensCompra {
     private String ticker;
     private int quantidade;
     private double precoUnitario;
-    private TipoMercado tipoMercado;
+    private OrdensCompraEnum tipoMercado;
     private Date dataExecucao;
 
 }
