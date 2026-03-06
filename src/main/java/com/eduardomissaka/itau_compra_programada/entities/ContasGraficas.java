@@ -1,6 +1,6 @@
-package entities;
+package com.eduardomissaka.itau_compra_programada.entities;
 
-import enuns.ContasGraficasEnum;
+import com.eduardomissaka.itau_compra_programada.enuns.ContasGraficasEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

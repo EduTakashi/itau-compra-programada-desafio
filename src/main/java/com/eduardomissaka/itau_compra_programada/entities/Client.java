@@ -1,4 +1,4 @@
-package entities;
+package com.eduardomissaka.itau_compra_programada.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

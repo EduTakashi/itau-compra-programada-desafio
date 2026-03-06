@@ -1,6 +1,6 @@
-package entities;
+package com.eduardomissaka.itau_compra_programada.entities;
 
-import enuns.RebalanceamentosEnum;
+import com.eduardomissaka.itau_compra_programada.enuns.RebalanceamentosEnum;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 

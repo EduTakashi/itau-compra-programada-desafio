@@ -1,6 +1,6 @@
-package entities;
+package com.eduardomissaka.itau_compra_programada.entities;
 
-import enuns.EventoEnum;
+import com.eduardomissaka.itau_compra_programada.enuns.EventoEnum;
 import jakarta.persistence.*;
 
 import java.util.Date;
