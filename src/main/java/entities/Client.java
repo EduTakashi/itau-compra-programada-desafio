@@ -38,4 +38,7 @@ public class Client {
 
     @OneToMany(mappedBy = "clientId")
     private List<EventosIR> eventosList;
+
+    @OneToMany(mappedBy = "clientId")
+    private List<Rebalanceamentos> rebalanceamentosList;
 }
