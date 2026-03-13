@@ -63,4 +63,20 @@ public class ClientService {
 
         return new ClientDTO(client);
     }
+
+    @Transactional
+    public ClientDTO updateValorMensal(Long id, Double valorMensal) {
+        if (valorMensal == null || valorMensal < VALOR_MINIMO) {
+            throw new ValorMensalMinimoException(
+                "O valor mensal mínimo é R$ " + VALOR_MINIMO + ". Valor informado: " + valorMensal);
+        }
+
+        Client client = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cliente não encontrado com ID: " + id));
+
+        client.setValorMensal(valorMensal);
+        client = repository.save(client);
+
+        return new ClientDTO(client);
+    }
 }
